@@ -93,7 +93,38 @@
 	         dragging="move"
 	         moving="move"
 	         />
+	<hotspot name="thumb_wall"
+         style="hittesttextfield"
+         ath="0"
+         atv="0"
+         width="800"
+         height="500"
+         visible="false"
+         zorder="10"
+         distorted="true"
+         depth="1000"
+         keep="true"
+         background="true"
+         bgcolor="0xFFFFFF"
+         bgalpha="0.3" />
 
+	<hotspot name="close_button_wall"
+		type="image"
+		url="icons/close.png"
+		ath="0"
+		atv="0"
+		ox="380"
+		oy="-230"
+		scale="1"
+		width="32"
+		height="32"
+		distorted="true"
+		handcursor="true"
+		zorder="11"
+		depth="1001"
+        visible="false"
+		keep="true"
+		onclick="hide_all_thumbs();" />
 
 	<!-- ensure stagescale 2x for mobile devices (regardless if mobilescale is 0.5 or 1.0) -->
 	<krpano stagescale="calc:stagescale * 2" if="stagescale LT 1.0" devices="mobile" />
@@ -410,11 +441,11 @@
 						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
 				</layer>
 
-				<!-- <layer name="btn_vr" type="container" style="skin_hover" x="" y="80%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="start_vr();">
+				<layer name="btn_vr" type="container" style="skin_hover" x="" y="80%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="start_vr();">
 					<layer name="icon_vr" capture="false" url="icons/vr.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
 					<layer name="text_vr" capture="false" type="text" html="VR" x="0" y="60%" width="100%" height="13" bg="false"
 						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
-				</layer> -->
+				</layer>
 				<layer name="btn_hide" type="container" style="skin_hover" x="" y="90%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="skin_hideskin()">
 					<layer name="icon_hide" capture="false" style="skin_base" crop="0|64|64|64" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
 					<layer name="text_hide" capture="false" type="text" html="ẨN TÁC VỤ" x="0" y="60%" width="100%" height="13" bg="false"
@@ -467,8 +498,8 @@
 	<layer name="skin_btn_prev_fs" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(-1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_prev_fs_icon" style="skin_base" crop="0|64|64|64"  align="center" scale="0.5" enabled="false" />
 	</layer>
-	<layer name="skin_btn_show_menu" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_showskin;" onout="tween(alpha,0.75);" ondown.touch="onhover();" onup.touch="onout();">
-		<layer name="skin_btn_prev_fs_icon" style="skin_base" crop="64|64|64|64"  align="center" scale="0.5" enabled="true" onhover="skin_showskin" onclick="skin_showskin;"/>
+	<layer name="skin_btn_show_menu" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onout="tween(alpha,0.75);" ondown.touch="onhover();" onup.touch="onout();">
+		<layer name="skin_btn_show_menuicon" style="skin_base" crop="64|64|64|64"  align="center" scale="0.5" enabled="true" onhover="skin_showskin" onclick="skin_showskin;"/>
 	</layer>
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
@@ -485,10 +516,9 @@
 	set(i, 0);
 	for(set(i, 0), i LT global.thumbs.length, inc(i),
 		copy(hsname, global.thumbs[get(i)]);
-
-		set(hotspot[get(hsname)].visible, false);
-		set(hotspot[calc(get(hsname) + '_text')].visible, false);
-		set(hotspot[calc(get(hsname) + 'bg')].visible, false);
+		removehotspot(get(hsname));
+		removehotspot(calc(get(hsname) + '_text'));
+		removehotspot(calc(get(hsname) + 'bg'));
 	);
 	set(hotspot[thumb_wall].visible, false);
 	set(hotspot[close_button_wall].visible, false);
@@ -513,6 +543,7 @@
 	);
 </action>
 <action name="show_all_thumbs" scope="local">
+	generate_scene_thumbs();
 	set(i, 0);
 	for(set(i, 0), i LT global.thumbs.length, inc(i),
 		copy(hsname, global.thumbs[get(i)]);
@@ -534,6 +565,76 @@
 	set(hotspot[close_button_wall].atv, get(view.vlookat));
 	set(hotspot[thumb_wall].ath, get(view.hlookat));
 	set(hotspot[close_button_wall].ath, get(view.hlookat));
+</action>
+<action name="generate_scene_thumbs" scope="local">
+	set(i, 0);
+	set(columns, 3);                  <!-- số cột của lưới thumbnails -->
+	def(global.thumbs, array);
+	copy(currentScene, scene[get(xml.scene)].doc);
+	for(set(sceneindex, 0), sceneindex LT scene.count, inc(sceneindex),
+		if(scene[get(sceneindex)].doc == currentScene,
+			copy(scname, scene[get(sceneindex)].name);
+			copy(title, scene[get(scname)].title);
+			copy(thumburl, scene[get(scname)].thumburl);
+
+			<!-- Tính vị trí grid -->
+			mod(x, get(i), get(columns));
+			div(y, get(i), get(columns));
+			Math.floor(y);
+			<!-- Tính offset (tọa độ) -->
+			set(ox, calc(get(x) * 250 - 240));   <!-- khoảng cách ngang, canh giữa -->
+			set(oy, calc(get(y) * 160 - 150));   <!-- khoảng cách dọc -->
+
+					<!-- Tạo thumbnail -->
+			addhotspot(get(scname));
+			<!-- set(hotspot[get(scname)].parent, thumb_wall); -->
+			set(hotspot[get(scname)].url, get(thumburl));
+			set(hotspot[get(scname)].type, 'image');
+			set(hotspot[get(scname)].ox, get(ox));
+			set(hotspot[get(scname)].oy, calc(get(oy) - 10));
+			set(hotspot[get(scname)].width, 180);
+			set(hotspot[get(scname)].height, 80);
+			set(hotspot[get(scname)].scale, 1.0);
+			set(hotspot[get(scname)].distorted, true);
+			set(hotspot[get(scname)].zorder, 14);
+			set(hotspot[get(scname)].keep, true);
+			set(temp, calc('skin_loadscene(' + get(scname) + ',' + get(skin_settings.loadscene_blend) + ');' + 'hide_all_thumbs();'));
+			set(hotspot[get(scname)].onclick, get(temp));
+			<!-- Tạo thumbnail -->
+			addhotspot(calc(get(scname) + 'bg'));
+			<!-- set(hotspot[get(scname)].parent, thumb_wall); -->
+			set(hotspot[calc(get(scname) + 'bg')].url, skin/icons/bg_image.png);
+			set(hotspot[calc(get(scname) + 'bg')].type, 'image');
+			set(hotspot[calc(get(scname) + 'bg')].ox, get(ox));
+			set(hotspot[calc(get(scname) + 'bg')].oy, get(oy));
+			set(hotspot[calc(get(scname) + 'bg')].width, 200);
+			set(hotspot[calc(get(scname) + 'bg')].height, 130);
+			set(hotspot[calc(get(scname) + 'bg')].distorted, true);
+			set(hotspot[calc(get(scname) + 'bg')].zorder, 13);
+			set(hotspot[calc(get(scname) + 'bg')].keep, true);
+			set(hotspot[calc(get(scname) + 'bg')].background, true);
+			set(hotspot[calc(get(scname) + 'bg')].bgroundedge, 7);
+
+			<!-- Thêm text title -->
+			addhotspot(calc(get(scname) + '_text'));
+			<!-- set(hotspot[get(scname) + '_text'].parent, thumb_wall); -->
+			set(hotspot[calc(get(scname) + '_text')].type, text);
+			set(hotspot[calc(get(scname) + '_text')].html, get(title));
+			set(hotspot[calc(get(scname) + '_text')].css, 'text-align:center;color:#fff;font-size:12px;background:none;background-color:none;');
+			set(hotspot[calc(get(scname) + '_text')].width, 200);
+			set(hotspot[calc(get(scname) + '_text')].height, 20);
+			set(hotspot[calc(get(scname) + '_text')].ox, get(ox));
+			set(hotspot[calc(get(scname) + '_text')].distorted, true);
+			set(hotspot[calc(get(scname) + '_text')].oy, calc(get(oy) + 40));
+			set(hotspot[calc(get(scname) + '_text')].keep, true);
+			set(hotspot[calc(get(scname) + '_text')].zorder, 14);
+			set(hotspot[calc(get(scname) + '_text')].background, false);
+
+			<!-- Lưu vào mảng -->
+			set(global.thumbs[get(global.thumbs.length)], get(scname));
+			inc(i);
+		);
+	);
 </action>
 	<action name="locate_map_hover" scope="local" args="layertoglow, layertext, istrue">
 		if(layertoglow != null,
@@ -640,7 +741,6 @@
 	</action>
 
 	<action name="set_global" onstart="autorun" scope="local">
-		trace(get(scene[get(xml.scene)].doc));
 		if(scene[get(xml.scene)].doc == "den-hung",
 			set(global.title, 'Đền Hùng'));
 		if(scene[get(xml.scene)].doc == "ninh-kieu",
@@ -706,8 +806,8 @@
 	<events name="skin_events" keep="true"
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
 	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); set(layer[location_container].x, get(scene[get(xml.scene)].mapx)); set(layer[location_container].y, get(scene[get(xml.scene)].mapy));"
-	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();"
-	onloadcomplete="skin_showloading(false); play_intro(); play_audio();"
+	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs();"
+	onloadcomplete="skin_showloading(false); "
 	onidle="skin_deeplinking_update_url();"
 	onresize="skin_onresize();"
 	onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"
@@ -743,6 +843,10 @@
 
 	</action>
 	
+	<action name="set_scence_array" scope="local" autorun="onstart">
+		def(global.scence_array, array);
+		set(global.scence_array.count, 0);
+	</action>
 	
 	<action name="skin_startup" scope="local">
 		

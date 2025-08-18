@@ -210,7 +210,7 @@
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_3" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_3.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_3" title="Bến Ninh Kiều" onstart="lookat(-90,0,120)" thumburl="panos/Ninh_Kithbu_3.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -227,7 +227,7 @@
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_4" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_4.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_4" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_4.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
