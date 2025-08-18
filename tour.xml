@@ -71,7 +71,7 @@
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 	
 	
-	<scene name="scene_tthvng_quan" title="Tổng quan" onstart="" thumburl="panos/Tthvng_quan.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="den-hung">
+	<scene name="scene_tthvng_quan" title="Tổng quan" onstart="" thumburl="panos/Tthvng_quan.tiles/thumb.jpg" lat="10.06645406778586" lng="105.73373801015498" alt="" heading="" doc="den-hung">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -176,7 +176,7 @@
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="10.032556739239256" lng="105.7881556934933" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -277,7 +277,7 @@
 
 	</scene>
 
-	<scene name="scene_bpqn_ngopgi_chthj" title="Bên ngoài chợ" onstart="" thumburl="panos/Bpqn_ngopgi_chthj.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="cho-can-tho">
+	<scene name="scene_bpqn_ngopgi_chthj" title="Bên ngoài chợ" onstart="" thumburl="panos/Bpqn_ngopgi_chthj.tiles/thumb.jpg" lat="10.03155859191283" lng="105.78808770885222" alt="" heading="" doc="cho-can-tho">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -312,7 +312,7 @@
 
 	</scene>
 
-	<scene name="scene_cong_vao" title="Cổng Vào" onstart="lookat(0,0,120.0);" thumburl="panos/cong_vao.tiles/thumb.jpg" mapx="0.82" mapy="0.70" lat="" lng="" alt="" heading="" doc="nha-co-binh-thuy">
+	<scene name="scene_cong_vao" title="Cổng Vào" onstart="lookat(0,0,120.0);" thumburl="panos/cong_vao.tiles/thumb.jpg" mapx="0.82" mapy="0.70" lat="10.067205510200665" lng="105.74967379987085" alt="" heading="" doc="nha-co-binh-thuy">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -464,7 +464,7 @@
 
 	</scene>
 
-	<scene name="scene_san_truoc" title="Sân Đình" onstart="lookat(0,0,120.0);" thumburl="panos/san_truoc.tiles/thumb.jpg" mapx="0.67" mapy="0.9" lat="" lng="" alt="" heading="" doc="dinh-binh-thuy">
+	<scene name="scene_san_truoc" title="Sân Đình" onstart="lookat(0,0,120.0);" thumburl="panos/san_truoc.tiles/thumb.jpg" mapx="0.67" mapy="0.9" lat="10.072645932521773" lng="105.75229640883725" alt="" heading="" doc="dinh-binh-thuy">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -540,7 +540,7 @@
 
 	</scene>
 
-	<scene name="scene_cong_tam_quan" title="Cổng Tam Quan" onstart="lookat(0,0,120.0);" thumburl="panos/cong_tam_quan.tiles/thumb.jpg" mapx="0.11" mapy="0.55" lat="" lng="" alt="" heading=""  doc="thien-vien-truc-lam-phuong-nam">
+	<scene name="scene_cong_tam_quan" title="Cổng Tam Quan" onstart="lookat(0,0,120.0);" thumburl="panos/cong_tam_quan.tiles/thumb.jpg" mapx="0.11" mapy="0.55" lat="9.99062152156382" lng="105.70393374034107" alt="" heading=""  doc="thien-vien-truc-lam-phuong-nam">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 

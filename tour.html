@@ -14,7 +14,7 @@
 </head>
 <body>
 <audio id="bg_music" preload="auto">
-  <source src="musics/bg_music.mp3" type="audio/mpeg">
+  <source id="bgSource" src="" type="audio/mpeg">
 </audio>
 <audio id="intro" preload="auto">
   <source id="introSource" src="" type="audio/mpeg">
@@ -29,87 +29,67 @@
 </div>
 <script>
   const bg_audio = document.getElementById("bg_music");
+  const bgSource = document.getElementById("bgSource");
   const intro_audio = document.getElementById("intro");
   const introSource = document.getElementById("introSource");
   let sceneBefore = "";
-//   let firstDrag = true;
-//   let statusFlg = false;
-
-//   function tryPlayAudio() {
-// 	if(!statusFlg){
-// 		if (firstDrag) {
-// 			bg_audio.volume = 0.08;
-// 			bg_audio.play();
-// 			intro_audio.volume = 0.4; 
-// 			intro_audio.play();
-// 			firstDrag = false;
-// 		}
-// 	}
-//   }
+  let docBefore = "";
   function playAudio(doc, isToggle) {
 	switch(doc){
 		case "den-hung":
-			introSource.src = "intro/chuakhainguyen.wav";
+			bgSource.src = "music/bg_music-den-hung.wav";
 			break;
 		case "nha-co-binh-thuy":
-			introSource.src = "intro/chuatranquoc.wav";
+			bgSource.src = "music/bg_music-nha-co-binh-thuy.wav";
 			break;
 		case "cho-can-tho":
-			introSource.src = "intro/congvienthongnhat.wav";
+			bgSource.src = "music/bg_music-cho-co-can-tho.wav";
 			break;
 		case "dinh-binh-thuy":
-			introSource.src = "intro/denbachma.wav";
+			bgSource.src = "music/bg_music-dinh-binh-thuy.wav";
 			break;
 		case "thien-vien-truc-lam-phuong-nam":
-			introSource.src = "intro/nhahatlon.wav";
+			bgSource.src = "music/bg_music-thien-vien-truc-lam-phuong-nam.wav";
 			break;
 		case "ninh-kieu":
-			introSource.src = "intro/nhatholon.wav";
+			bgSource.src = "music/bg_music-ninh-kieu.wav";
 			break;
 	};
 	if (isToggle=='on') {
-		if (sceneBefore == "") {
-			intro_audio.load();
-			sceneBefore = doc;
+		if (docBefore == "") {
+			bg_audio.load();
+			docBefore = doc;
 		}
-		if (sceneBefore != doc) {
-			intro_audio.load();       
+		if (docBefore != doc) {
+			bg_audio.load();       
 		}
-		intro_audio.volume = 0.4;
-		intro_audio.play(); 
-		sceneBefore = doc;
+		bg_audio.volume = 0.1;
+		bg_audio.play(); 
+		docBefore = doc;
 	} else {
-	  intro_audio.pause();
+	  bg_audio.pause();
 	}
   }
+
   function playIntro(doc, isToggle) {
 	switch(doc){
-		case "scene_chuakhainguyen":
-			introSource.src = "intro/chuakhainguyen.wav";
+		case "den-hung":
+			introSource.src = "intro/den-hung.wav";
 			break;
-		case "scene_chuatranquoc":
-			introSource.src = "intro/chuatranquoc.wav";
+		case "nha-co-binh-thuy":
+			introSource.src = "intro/nha-co-binh-thuy.wav";
 			break;
-		case "scene_congvienthongnhat":
-			introSource.src = "intro/congvienthongnhat.wav";
+		case "cho-can-tho":
+			introSource.src = "intro/cho-co-can-tho.wav";
 			break;
-		case "scene_denbachma":
-			introSource.src = "intro/denbachma.wav";
+		case "dinh-binh-thuy":
+			introSource.src = "intro/dinh-binh-thuy.wav";
 			break;
-		case "scene_nhahatlon":
-			introSource.src = "intro/nhahatlon.wav";
+		case "thien-vien-truc-lam-phuong-nam":
+			introSource.src = "intro/thien-vien-truc-lam-phuong-nam.wav";
 			break;
-		case "scene_nhatholon":
-			introSource.src = "intro/nhatholon.wav";
-			break;
-		case "scene_thuvienquocgia":
-			introSource.src = "intro/thuvienquocgia.wav";
-			break;
-		case "scene_trangtien":
-			introSource.src = "intro/trangtien.wav";
-			break;
-		case "scene_vanmieuquoctugiam":
-			introSource.src = "intro/vanmieuquoctugiam.wav";
+		case "ninh-kieu":
+			introSource.src = "intro/ninh-kieu.wav";
 			break;
 	};
 	if (isToggle=='on') {

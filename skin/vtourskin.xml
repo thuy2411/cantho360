@@ -61,18 +61,6 @@
 
 	<scence_array name=""></scence_array>
 
-	<action name="start_audio">
-		js(tryPlayAudio());
-	</action>
-
-	<action name="play_audio">
-		js(playAudio());
-	</action>
-
-	<action name="play_intro">
-		js(playIntro());
-	</action>
-
 	<set var="view_360" val="none" />
 	<set var="first_drag" val="true" />
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
@@ -316,11 +304,18 @@
 		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="rightbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true"> 
 				<layer name="button_close" url="icons/close.png" align="righttop" x="0" y="0"	width="36" height="36"	handcursor="true" onclick="skin_showmap(false);" zorder="3"/>
 				<layer name="skin_map_container" type="container" align="rightbottom"  width="100%" height="100%" bgroundedge="get:skin_settings.design_bgroundedge" 	>
-					<layer name="skin_map" type="container" scale="1" url="map.png" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
-						<layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();">
+					<!-- <layer name="skin_map" type="container" scale="1" url="" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
+						<layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();"> -->
 							<!-- <plugin name="radar"  url.html5="../plugins/radar_source.js" x="-50" y="-50" scale="0.5" heading="0.0" headingoffset="90.0" fillcolor="0x45bfe3" fillalpha="0.5" linewidth="0.0" linecolor="0xFFFFFF" linealpha="0.3" invert="false" cursor="default"/> -->
+						<!-- </layer>
+					</layer> -->
+					<layer name="skin_map" style="krpanomaps" state="closed" url="" visible="false" align="lefttop" width="100%" height="50%" x="0" y="0" zorder="1" lat="21.0285" lng="105.8542" zoom="20.0" bgalpha="0" maptype="satellite" zoombase="screen" onmapready="skin_addmapspots();">
+							<maptypecontrol visible="true" align="righttop" x="5" y="5" buttonalign="v" scale.mobile="1.5" />
+							<radar visible="false" headingoffset="0" />
+							<spotstyle name="DEFAULT" url="vtourskin_mapspot.png" activeurl="vtourskin_mapspotactive.png" edge="bottom" x="-5" y="-8" scale="0.5" />
+							<layer name="skin_map_zoom_in"  style="skin_base" visible="get:skin_settings.maps_zoombuttons" crop="9|512|46|64"  align="right" x="0" y="-40" zorder="2" ondown="layer[skin_map].zoomin();  skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
+							<layer name="skin_map_zoom_out" style="skin_base" visible="get:skin_settings.maps_zoombuttons" crop="73|512|46|64" align="right" x="0" y="+40" zorder="2" ondown="layer[skin_map].zoomout(); skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
 						</layer>
-					</layer>
 				</layer>
 			</layer>
 		<layer name="skin_splitter_bottom" type="container" align="topleft" width="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" height="96%" x="10" y="0" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="2">
@@ -379,7 +374,7 @@
 						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
 				</layer>
 
-				<layer name="btn_music" type="container" style="skin_hover" x="" y="20%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="toggle_music()">
+				<layer name="btn_music" type="container" style="skin_hover" x="" y="20%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="toggle_audio()">
 					<layer name="icon_music" capture="false" url="icons/music.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center" />
 					<layer name="text_music" capture="false" type="text" html="NHẠC NỀN:OFF" x="0" y="60%" width="100%" height="13" bg="false"
 						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
@@ -660,6 +655,40 @@
 			set(global.title, 'Thiền Viện Trúc Lâm Phương Nam'));
 	</action>
 
+	<action name="play_intro">
+	if(layer[text_music].html == 'NHẠC NỀN:ON',
+		js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+	);
+	</action>
+
+	<action name="toggle_info" scope="local">
+		set(first_drag, false);
+		if(layer[text_info].html == 'GIỚI THIỆU:ON',
+			set(layer[text_info].html, 'GIỚI THIỆU:OFF');
+			js(playIntro(get(scene[get(xml.scene)].doc),'off'));
+			,
+			set(layer[text_info].html, 'GIỚI THIỆU:ON');
+			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+		);
+	</action>
+
+	<action name="play_audio">
+	if(layer[text_music].html == 'NHẠC NỀN:ON',
+		js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+	);
+	</action>
+
+	<action name="toggle_audio" scope="local">
+		set(first_drag, false);
+		if(layer[text_music].html == 'NHẠC NỀN:ON',
+			set(layer[text_music].html, 'NHẠC NỀN:OFF');
+			js(playAudio(get(scene[get(xml.scene)].doc),'off'));
+			,
+			set(layer[text_music].html, 'NHẠC NỀN:ON');
+			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+		);
+	</action>
+
 	<action name="skin_gyro_ondenied" scope="local">
 		addlayer(skin_gyro_ondenied);
 		layer[skin_gyro_ondenied].loadstyle(webvr_button_style);
@@ -678,7 +707,7 @@
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
 	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); set(layer[location_container].x, get(scene[get(xml.scene)].mapx)); set(layer[location_container].y, get(scene[get(xml.scene)].mapy));"
 	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();"
-	onloadcomplete="skin_showloading(false); "
+	onloadcomplete="skin_showloading(false); play_intro(); play_audio();"
 	onidle="skin_deeplinking_update_url();"
 	onresize="skin_onresize();"
 	onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"
@@ -690,32 +719,13 @@
 	
 	<action name="skin_mousedown_event" scope="local">
 		if(first_drag,
-			start_audio();
-			set(first_drag, false);
 			set(layer[text_music].html, 'NHẠC NỀN:ON');
+			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
 			set(layer[text_info].html, 'GIỚI THIỆU:ON');
+			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+			set(first_drag, false);
 		);
 		skin_showmap(false);
-	</action>
-
-	<action name="toggle_music" scope="local">
-		if(layer[text_music].html == 'NHẠC NỀN:ON',
-			set(layer[text_music].html, 'NHẠC NỀN:OFF');
-			js(playAudio('off'));
-			,
-			set(layer[text_music].html, 'NHẠC NỀN:ON');
-			js(playAudio('on'));
-		);
-	</action>
-
-	<action name="toggle_info" scope="local">
-		if(layer[text_info].html == 'GIỚI THIỆU:ON',
-			set(layer[text_info].html, 'GIỚI THIỆU:OFF');
-			js(playIntro('off'));
-			,
-			set(layer[text_info].html, 'GIỚI THIỆU:ON');
-			js(playIntro('on'));
-		);
 	</action>
 
 	<!-- skin actions -->
@@ -886,7 +896,7 @@
 		for(set(i,0), i LT scene.count, inc(i),
 			if(scene[get(i)].lat,
 				calc(spotname, 'spot' + i);
-				calc(spotclickevent, 'skin_hidetooltips(); activatespot(' + spotname + '); skin_loadscene(' + scene[get(i)].name + ',get(skin_settings.loadscene_blend)); delayedcall(0.5,skin_showmap(false));' );
+				calc(spotclickevent, 'skin_hidetooltips(); activatespot(' + spotname + '); skin_loadscene(' + scene[get(i)].name + ',get(skin_settings.loadscene_blend)); ' );
 				copy(scene[get(i)].mapspotname, spotname);
 				caller.addspot(get(spotname), get(scene[get(i)].lat), get(scene[get(i)].lng), get(scene[get(i)].heading), false, get(spotclickevent), null);
 				if(skin_settings.tooltips_mapspots,
@@ -896,7 +906,6 @@
 				);
 			);
 		);
-
 		caller.activatespot( calc(xml.scene != null ? scene[get(xml.scene)].mapspotname : 'spot0') );
 		caller.zoomToSpotsExtent();
 	</action>
