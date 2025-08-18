@@ -376,8 +376,8 @@
 		</image>
 
 		<hotspot name="spot1774338154" style="skin_hotspot_flycam_style" ath="-86.245" atv="-21.851" depth="1000.0"  width="180" height="140" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774338154thumb"  witdh="40%" height="20%" visible="false" url="panos/gian_ngoai.tiles/thumb.jpg" oy="125" ox="30" ath="-86.245" atv="-21.851" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774338154text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Ngoài" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="-86.245" atv="-21.851" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774338154thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/gian_ngoai.tiles/thumb.jpg" oy="125" ox="30" ath="-86.245" atv="-21.851" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774338154text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Ngoài" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="-86.245" atv="-21.851" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1774338904" style="skin_hotspotstyle" ath="145.795" atv="30.883" depth="1000.0" linkedscene="scene_san_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1776709692" style="skin_hotspotstyle" ath="22.773" atv="23.719" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true" />
@@ -397,8 +397,8 @@
 		</image>
 
 		<hotspot name="spot1776710140" style="skin_hotspot_flycam_style" ath="27.755" atv="-15.586" depth="1000.0"  width="180" height="140" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776710140thumb"  witdh="40%" height="20%" visible="false" url="panos/gian_trong.tiles/thumb.jpg" oy="125" ox="30" ath="27.755" atv="-15.586" depth="1000.0" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776710140text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Trong" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="27.755" atv="-15.586" depth="1000.0" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776710140thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/gian_trong.tiles/thumb.jpg" oy="125" ox="30" ath="27.755" atv="-15.586" depth="1000.0" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776710140text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Trong" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="27.755" atv="-15.586" depth="1000.0" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776710278" style="skin_hotspotstyle" ath="153.493" atv="29.162" depth="1000.0" linkedscene="scene_truoc_cua" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -417,8 +417,8 @@
 		</image>
 
 		<hotspot name="spot1776710452" style="skin_hotspot_flycam_style" ath="21.491" atv="-9.911" depth="1000.0"  width="180" height="140" linkedscene="scene_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776710452thumb"  witdh="40%" height="20%" visible="false" url="panos/nha_sau.tiles/thumb.jpg" oy="125" ox="30" ath="21.491" atv="-9.911" depth="1000.0" linkedscene="scene_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776710452text"  witdh="40%" height="2.5%" visible="false" type="text" html="Nhà Sau" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="21.491" atv="-9.911" depth="1000.0" linkedscene="scene_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776710452thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/nha_sau.tiles/thumb.jpg" oy="125" ox="30" ath="21.491" atv="-9.911" depth="1000.0" linkedscene="scene_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776710452text"  witdh="40%" height="2.5%" visible="false" type="text" html="Nhà Sau" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="21.491" atv="-9.911" depth="1000.0" linkedscene="scene_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776710577" style="skin_hotspotstyle" ath="-153.563" atv="25.078" depth="1000.0" linkedscene="scene_gian_ngoai" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -437,8 +437,8 @@
 		</image>
 
 		<hotspot name="spot1776710706" style="skin_hotspot_flycam_style" ath="12.66" atv="-14.71" depth="1000.0"  width="180" height="140" linkedscene="scene_vuon_hoa" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776710706thumb"  witdh="40%" height="20%" visible="false" url="panos/vuon_hoa.tiles/thumb.jpg" oy="125" ox="30" ath="12.66" atv="-14.71" depth="1000.0" linkedscene="scene_vuon_hoa" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776710706text"  witdh="40%" height="2.5%" visible="false" type="text" html="Vườn Hoa" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="12.66" atv="-14.71" depth="1000.0" linkedscene="scene_vuon_hoa" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776710706thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/vuon_hoa.tiles/thumb.jpg" oy="125" ox="30" ath="12.66" atv="-14.71" depth="1000.0" linkedscene="scene_vuon_hoa" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776710706text"  witdh="40%" height="2.5%" visible="false" type="text" html="Vườn Hoa" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="12.66" atv="-14.71" depth="1000.0" linkedscene="scene_vuon_hoa" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776710795" style="skin_hotspotstyle" ath="150.128" atv="26.358" depth="1000.0" linkedscene="scene_gian_trong" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -457,8 +457,8 @@
 		</image>
 
 		<hotspot name="spot1774337748" style="skin_hotspot_flycam_style" ath="36.373" atv="-23.937" depth="1000.0"  width="180" height="140" linkedscene="scene_san_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774337748thumb"  witdh="40%" height="20%" visible="false" url="panos/san_nha_truoc.tiles/thumb.jpg" oy="125" ox="30" ath="36.373" atv="-23.937" depth="1000.0" linkedscene="scene_san_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774337748text"  witdh="40%" height="2.5%" visible="false" type="text" html="Sân Nhà - Trước" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="36.373" atv="-23.937" depth="1000.0" linkedscene="scene_san_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774337748thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/san_nha_truoc.tiles/thumb.jpg" oy="125" ox="30" ath="36.373" atv="-23.937" depth="1000.0" linkedscene="scene_san_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774337748text"  witdh="40%" height="2.5%" visible="false" type="text" html="Sân Nhà - Trước" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="36.373" atv="-23.937" depth="1000.0" linkedscene="scene_san_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1774339128" style="skin_hotspotstyle" ath="-112.616" atv="17.084" depth="1000.0" linkedscene="scene_san_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -493,8 +493,8 @@
 		</image>
 
 		<hotspot name="spot1776738165" style="skin_hotspot_flycam_style" ath="50.179" atv="-29.772" depth="1000.0"  width="180" height="140" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776738165thumb"  witdh="40%" height="20%" visible="false" url="panos/trong_nha_giua.tiles/thumb.jpg" oy="125" ox="30" ath="50.179" atv="-29.772" depth="1000.0" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776738165text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Trong" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="50.179" atv="-29.772" depth="1000.0" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776738165thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/trong_nha_giua.tiles/thumb.jpg" oy="125" ox="30" ath="50.179" atv="-29.772" depth="1000.0" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776738165text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Trong" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="50.179" atv="-29.772" depth="1000.0" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776738551" style="skin_hotspotstyle" ath="103.113" atv="30.055" depth="1000.0" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -513,8 +513,8 @@
 		</image>
 
 		<hotspot name="spot1776738291" style="skin_hotspot_flycam_style" ath="32.118" atv="-27.008" depth="1000.0"  width="180" height="140" linkedscene="scene_trong_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776738291thumb"  witdh="40%" height="20%" visible="false" url="panos/trong_nha_sau.tiles/thumb.jpg" oy="125" ox="30" ath="32.118" atv="-27.008" depth="1000.0" linkedscene="scene_trong_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776738291text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Sau" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="32.118" atv="-27.008" depth="1000.0" linkedscene="scene_trong_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776738291thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/trong_nha_sau.tiles/thumb.jpg" oy="125" ox="30" ath="32.118" atv="-27.008" depth="1000.0" linkedscene="scene_trong_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776738291text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gian Sau" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="32.118" atv="-27.008" depth="1000.0" linkedscene="scene_trong_nha_sau" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776738710" style="skin_hotspotstyle" ath="140.772" atv="28.406" depth="1000.0" linkedscene="scene_trong_nha_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -533,8 +533,8 @@
 		</image>
 
 		<hotspot name="spot1776738414" style="skin_hotspot_flycam_style" ath="54.106" atv="-23.122" depth="1000.0"  width="180" height="140" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1776738414thumb"  witdh="40%" height="20%" visible="false" url="panos/san_truoc.tiles/thumb.jpg" oy="125" ox="30" ath="54.106" atv="-23.122" depth="1000.0" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1776738414text"  witdh="40%" height="2.5%" visible="false" type="text" html="Sân Trước" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="54.106" atv="-23.122" depth="1000.0" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776738414thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/san_truoc.tiles/thumb.jpg" oy="125" ox="30" ath="54.106" atv="-23.122" depth="1000.0" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1776738414text"  witdh="40%" height="2.5%" visible="false" type="text" html="Sân Trước" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="54.106" atv="-23.122" depth="1000.0" linkedscene="scene_san_truoc" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 		<hotspot name="spot1776738860" style="skin_hotspotstyle" ath="153.507" atv="37.13" depth="1000.0" linkedscene="scene_trong_nha_giua" linkedscene_hoffset="0.0" use3dtransition="true" />
 
@@ -604,8 +604,8 @@
 
 		<hotspot name="spot1774366827" style="skin_hotspotstyle" ath="-117.097" atv="11.903" depth="1000.0" linkedscene="scene_chinh_dien" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1774366955" style="skin_hotspot_flycam_style" ath="41.504" atv="-20.056" depth="1000.0"  width="180" height="140" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774366955thumb"  witdh="40%" height="20%" visible="false" url="panos/gac_chuong.tiles/thumb.jpg" oy="125" ox="30" ath="41.504" atv="-20.056" depth="1000.0" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774366955text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gác Chuông" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="41.504" atv="-20.056" depth="1000.0" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774366955thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/gac_chuong.tiles/thumb.jpg" oy="125" ox="30" ath="41.504" atv="-20.056" depth="1000.0" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774366955text"  witdh="40%" height="2.5%" visible="false" type="text" html="Gác Chuông" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="41.504" atv="-20.056" depth="1000.0" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 	</scene>
 
@@ -623,8 +623,8 @@
 
 		<hotspot name="spot1774368426" style="skin_hotspotstyle" ath="39.711" atv="17.342" depth="1000.0" linkedscene="scene_chinh_dien" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1774373050" style="skin_hotspot_flycam_style" ath="-91.556" atv="-21.779" depth="1000.0"  width="180" height="140" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774373050thumb"  witdh="40%" height="20%" visible="false" url="panos/chua_mot_cot.tiles/thumb.jpg" oy="125" ox="30" ath="-91.556" atv="-21.779" depth="1000.0" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774373050text"  witdh="40%" height="2.5%" visible="false" type="text" html="Chùa Một Cột" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="-91.556" atv="-21.779" depth="1000.0" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774373050thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/chua_mot_cot.tiles/thumb.jpg" oy="125" ox="30" ath="-91.556" atv="-21.779" depth="1000.0" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774373050text"  witdh="40%" height="2.5%" visible="false" type="text" html="Chùa Một Cột" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="-91.556" atv="-21.779" depth="1000.0" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 	</scene>
 
@@ -643,8 +643,8 @@
 		<hotspot name="spot1774367128" style="skin_hotspotstyle" ath="-56.709" atv="12.376" depth="1000.0" linkedscene="scene_gac_chuong" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1774367236" style="skin_hotspotstyle" ath="-169.372" atv="19.175" depth="1000.0" linkedscene="scene_chinh_dien" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1774367985" style="skin_hotspot_flycam_style" ath="37.848" atv="-15.374" depth="1000.0"  width="180" height="140" linkedscene="scene_tuong_phat" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774367985thumb"  witdh="40%" height="20%" visible="false" url="panos/tuong_phat.tiles/thumb.jpg" oy="125" ox="30" ath="37.848" atv="-15.374" depth="1000.0" linkedscene="scene_tuong_phat" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774367985text"  witdh="40%" height="2.5%" visible="false" type="text" html="Tượng Phật" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="37.848" atv="-15.374" depth="1000.0" linkedscene="scene_tuong_phat" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774367985thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/tuong_phat.tiles/thumb.jpg" oy="125" ox="30" ath="37.848" atv="-15.374" depth="1000.0" linkedscene="scene_tuong_phat" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774367985text"  witdh="40%" height="2.5%" visible="false" type="text" html="Tượng Phật" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="37.848" atv="-15.374" depth="1000.0" linkedscene="scene_tuong_phat" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 	</scene>
 
@@ -662,8 +662,8 @@
 
 		<hotspot name="spot1774367722" style="skin_hotspotstyle" ath="-87.637" atv="7.879" depth="1000.0" linkedscene="scene_chua_mot_cot" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1774367804" style="skin_hotspot_flycam_style" ath="29.06" atv="-20.052" depth="1000.0"  width="180" height="140" linkedscene="scene_18_vi_la_han" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1774367804thumb"  witdh="40%" height="20%" visible="false" url="panos/18_vi_la_han.tiles/thumb.jpg" oy="125" ox="30" ath="29.06" atv="-20.052" depth="1000.0" linkedscene="scene_18_vi_la_han" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1774367804text"  witdh="40%" height="2.5%" visible="false" type="text" html="18 Vị La Hán" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="29.06" atv="-20.052" depth="1000.0" linkedscene="scene_18_vi_la_han" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1774367804thumb" style="skin_hotspotstyle_hover" witdh="40%" height="20%" visible="false" url="panos/18_vi_la_han.tiles/thumb.jpg" oy="125" ox="30" ath="29.06" atv="-20.052" depth="1000.0" linkedscene="scene_18_vi_la_han" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<!-- <hotspot name="spot1774367804text"  witdh="40%" height="2.5%" visible="false" type="text" html="18 Vị La Hán" css="font-size:20px; border:5px;" bgroundedge="7" oy="225" ox="30" ath="29.06" atv="-20.052" depth="1000.0" linkedscene="scene_18_vi_la_han" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
 
 	</scene>
 
