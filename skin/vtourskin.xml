@@ -332,7 +332,7 @@
 			</layer>
 			
 		</layer>
-		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="rightbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true"> 
+		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="leftbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true"> 
 				<layer name="button_close" url="icons/close.png" align="righttop" x="0" y="0"	width="36" height="36"	handcursor="true" onclick="skin_showmap(false);" zorder="3"/>
 				<layer name="skin_map_container" type="container" align="rightbottom"  width="100%" height="100%" bgroundedge="get:skin_settings.design_bgroundedge" 	>
 					<!-- <layer name="skin_map" type="container" scale="1" url="" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
@@ -349,9 +349,9 @@
 						</layer>
 				</layer>
 			</layer>
-		<layer name="skin_splitter_bottom" type="container" align="topleft" width="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" height="96%" x="10" y="0" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="2">
+		<!-- <layer name="skin_splitter_bottom" type="container" align="topleft" width="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" height="96%" x="10" y="0" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="2">
 			<layer name="skin_control_bar_bg" type="container" align="topleft" width="calc:skin_settings.controlbar_height" height="96%" x="0" y="get:skin_settings.controlbar_offset" bgcolor="get:skin_settings.design_bgcolor" bgalpha="get:skin_settings.design_bgalpha" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" />
-		</layer>
+		</layer> -->
 
 		<layer name="box" type="container" align="top" x="0" y="20" width.normal="700" width.mobile="80%" height="80%" bgcolor="0x5c64af" bgalpha="1" bgborder="1 0x777777 0.5" bgroundedge="7" bgshadow="0 4 20 0x000000 0.25" visible="false">
 			<layer name="box_title" y="0" type="text" align="top" width="100%" height="50" bgalpha="1.0" zorder="2" bgcolor="0x5c64af" bgborder="0">
@@ -389,67 +389,45 @@
 		</layer>
 		</layer>
 
-		<layer name="skin_control_bar" type="container" align="topleft" width="110" height="get:skin_settings.controlbar_width" x="10" y="get:skin_settings.controlbar_offset" onloaded="skin_calc_opened_closed();" zorder="3" bgcapture="true" bgroundedge="7">
+		<layer name="skin_control_bar" type="container" align="rightbottom" width="36" height="342" x="5" y="0" onloaded="skin_calc_opened_closed();" zorder="3" bgcapture="true" bgroundedge="7">
 			<layer name="skin_control_bar_buttons" type="container" align="topleft" width="110" height="96%">
 				<!-- PREV -->
-				<layer name="skin_btn_prev" style="skin_hover" type="container" x="0" y="0" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="go_back();">
-					<layer name="icon_prev" capture="false" url="icons/prev.png" x="43%" y="20%" width="36" height="65%" scale="0.5" />
-					<layer name="text_prev" capture="false" type="text" html="ẢNH TRƯỚC" y="60%" width="100%" height="35%" bg="false"
-						css="text-align:center; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="skin_btn_prev" style="skin_hover" type="container" x="0" y="0" width="36" height="36" background="true" bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="go_back();" bgroundedge="20">
+					<layer name="icon_prev" capture="false" url="icons/prev.png" align="center" x="0" y="0" width="36" height="100%" scale="0.5	" />
+
 				</layer>
 
 				<!-- TOÀN CẢNH -->
-				<layer name="btn_view" type="container" style="skin_hover" x="" y="10%" width="100%" height="10%" onclick="default_look();" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true">
-					<layer name="icon_view" capture="false" type="text"  url="icons/view.png" x="43%" y="20%" width="36" height="65%" scale="0.5"/>
-					<layer name="text_view" capture="false" type="text" html="TOÀN CẢNH" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_view" type="container" style="skin_hover" x="" y="38" width="36" height="36" onclick="default_look();" background="true" bgcolor="0x6278a1" bgalpha="1" bgcapture="true" bgroundedge="20">
+					<layer name="icon_view" capture="false" type="text"  url="icons/view.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7"/>
 				</layer>
 
-				<layer name="btn_music" type="container" style="skin_hover" x="" y="20%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="toggle_audio()">
-					<layer name="icon_music" capture="false" url="icons/music.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center" />
-					<layer name="text_music" capture="false" type="text" html="NHẠC NỀN:OFF" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				
+
+				<layer name="btn_menu" type="container" style="skin_hover" x="" y="76" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" ondown="skin_showmap(false); skin_showthumbs();" bgroundedge="20">
+					<layer name="icon_menu" capture="false" url="icons/menu.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center" />
 				</layer>
 
-				<layer name="btn_info" type="container" style="skin_hover" x="" y="30%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="toggle_info()">
-					<layer name="icon_info" capture="false" url="icons/info.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
-					<layer name="text_info" capture="false" type="text" html="GIỚI THIỆU:OFF" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_360" type="container" style="skin_hover" x="" y="114" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="view_360_action();" bgroundedge="20">
+					<layer name="icon_360" capture="false" url="icons/360.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
 
-				<layer name="btn_info_circle" type="container" style="skin_hover" x="" y="40%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="show_info();">
-					<layer name="icon_info_circle" capture="false" url="icons/info-circle.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center" />
-					<layer name="text_info_circle" capture="false" type="text" html="THÔNG TIN" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_vr" type="container" style="skin_hover" x="" y="152" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="start_vr();" bgroundedge="20">
+					<layer name="icon_vr" capture="false" url="icons/vr.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
-
-				<layer name="btn_map" type="container" style="skin_hover" x="" y="50%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" ondown="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap();">
-					<layer name="icon_map" capture="false" url="icons/map.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center" />
-					<layer name="text_map" capture="false" type="text" html="BẢN ĐỒ" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_camera" type="container" style="skin_hover" x="" y="190" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true"  bgroundedge="20" onclick="shot_without_ui();">
+					<layer name="icon_camera" capture="false" url="icons/camera.svg" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
-
-				<layer name="btn_menu" type="container" style="skin_hover" x="" y="60%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" ondown="skin_showmap(false); skin_showthumbs();">
-					<layer name="icon_menu" capture="false" url="icons/menu.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center" />
-					<layer name="text_menu" capture="false" type="text" html="MENU" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_rotate" type="container" style="skin_hover" x="" y="228" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="toggle_rotate();" bgroundedge="20">
+					<layer name="icon_rotate_off" capture="false" url="icons/rotate_off.svg" visible="false" align="center" x="0" y="0" width="36" height="100%" scale="1" origin="center"/>
+					<layer name="icon_rotate" capture="false" url="icons/rotate.svg" align="center" x="0" y="0" width="36" height="100%" scale="1" origin="center"/>
 				</layer>
-
-				<layer name="btn_360" type="container" style="skin_hover" x="" y="70%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="view_360_action();">
-					<layer name="icon_360" capture="false" url="icons/360.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
-					<layer name="text_360" capture="false" type="text" html="VIEW 360" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_zoom" type="container" style="skin_hover" x="" y="266" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true"  bgroundedge="20" onclick="toggle_fullscene();">
+					<layer name="icon_zoom_out" capture="false" url="icons/zoom_out_ico.svg" visible="false" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
+					<layer name="icon_zoom_in" capture="false" url="icons/zoom_in_ico.svg" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
-
-				<layer name="btn_vr" type="container" style="skin_hover" x="" y="80%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="start_vr();">
-					<layer name="icon_vr" capture="false" url="icons/vr.png" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
-					<layer name="text_vr" capture="false" type="text" html="VR" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
-				</layer>
-				<layer name="btn_hide" type="container" style="skin_hover" x="" y="90%" width="100%" height="10%" background="true" bgcolor="0x000000" bgalpha="0.001" bgcapture="true" onclick="skin_hideskin()">
-					<layer name="icon_hide" capture="false" style="skin_base" crop="0|64|64|64" x="43%" y="20%" width="36" height="65%" scale="0.5" origin="center"/>
-					<layer name="text_hide" capture="false" type="text" html="ẨN TÁC VỤ" x="0" y="60%" width="100%" height="13" bg="false"
-						css="text-align:center; font-size:11px; color:#FFFFFF; font-family:sans-serif; background:none" />
+				<layer name="btn_hide" type="container" style="skin_hover" x="" y="304" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="toggle_menu()" bgroundedge="20">
+					<layer name="icon_hide" capture="false" url="icons/setting_ico.svg" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
 				<!-- NEXT -->
 				<!-- <layer name="skin_btn_next" type="container" horizontal="center" align="right" width="24" height="24">
@@ -477,6 +455,19 @@
 			</layer>
 		</layer>
 
+				<layer name="btn_voice" type="container" align="rightbottom" x="43" y="38" width="144" height="144"  bgcapture="true" onclick="toggle_audio();" bgroundedge="20">
+					<layer name="icon_voice" capture="false" visible="false" url="icons/voice.webp" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center" />
+					<layer name="icon_voice_off" capture="false"  url="icons/voice_off.png" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center" />
+				</layer>
+
+				<layer name="btn_info_circle" type="container" style="skin_hover" align="rightbottom" x="144" y="144" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="show_info();" bgroundedge="20">
+					<layer name="icon_info_circle" capture="false" url="icons/infoico.svg" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center" />
+				</layer>
+
+				<layer name="btn_map" type="container" align="lefttbottom" x="" y="60" width="50" height="50"  onover="set(layer[icon_map_off].visible, false); set(layer[icon_map].visible, true);" onout="set(layer[icon_map_off].visible, true); set(layer[icon_map].visible, false);">
+					<layer name="icon_map_off" capture="false"  url="icons/iconmap_off.svg" align="center" x="0" y="0" width="50" height="100%" scale="1" origin="center" onclick="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap(); "/>
+					<layer name="icon_map" capture="false" visible="false" url="icons/iconmap.svg" align="center" x="0" y="0" width="50" height="100%" scale="1" origin="center" onclick="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap(); " />
+				</layer>
 		<layer name="skin_loadingtext" type="text" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" bg="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" txtshadow="get:skin_settings.design_text_txtshadow" />
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
 		<layer name="btn_next_scene" type="container" align="right" width="230" height="9%" x="10" y="-100" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" background="true" bgcolor="0x000000" bgalpha="0.5" bgcapture="true" bgroundedge="10">
@@ -494,6 +485,8 @@
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
+	
+
 	<!-- previous/next scene buttons for the hidden skin mode -->
 	<layer name="skin_btn_prev_fs" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(-1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_prev_fs_icon" style="skin_base" crop="0|64|64|64"  align="center" scale="0.5" enabled="false" />
@@ -504,6 +497,18 @@
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
+	<!-- Progress UI -->
+	<layer name="bgm_progress" type="container" keep="true"
+		align="righttbottom" x="43" y="18" width="144" height="20"
+		background="true" bgalpha="0.25" bgcolor="0x000000"  bgroundedge="8"
+			zorder="1" visible="true" maskchildren="true">
+	<layer name="bgm_progress_fill" type="container" visible="true"  keep="true"
+		align="left" edge="left" x="0" y="0" width="calc:1.44*get(bgm_progress_percent)" height="20"
+		background="true" bgalpha="1.0"  bgcolor="0x55CCFF" bgroundedge="8" zorder="2"
+		/>
+	</layer>
+
+
 
 	<!-- gyro plugin -->
 	<plugin name="skin_gyro" keep="true" url="" plugin_url="%VIEWER%/plugins/gyro2.js" softstart="1.0" desktopsupport="false" enabled="false"
@@ -755,39 +760,138 @@
 			set(global.title, 'Thiền Viện Trúc Lâm Phương Nam'));
 	</action>
 
-	<action name="play_intro">
-	if(layer[text_music].html == 'NHẠC NỀN:ON',
-		js(playIntro(get(scene[get(xml.scene)].doc),'on'));
-	);
-	</action>
-
-	<action name="toggle_info" scope="local">
-		set(first_drag, false);
-		if(layer[text_info].html == 'GIỚI THIỆU:ON',
-			set(layer[text_info].html, 'GIỚI THIỆU:OFF');
-			js(playIntro(get(scene[get(xml.scene)].doc),'off'));
-			,
-			set(layer[text_info].html, 'GIỚI THIỆU:ON');
-			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
-		);
-	</action>
-
 	<action name="play_audio">
-	if(layer[text_music].html == 'NHẠC NỀN:ON',
+	if(layer[icon_voice].visible == true,
 		js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+		js(playIntro(get(scene[get(xml.scene)].doc),'on'));
 	);
 	</action>
 
 	<action name="toggle_audio" scope="local">
 		set(first_drag, false);
-		if(layer[text_music].html == 'NHẠC NỀN:ON',
-			set(layer[text_music].html, 'NHẠC NỀN:OFF');
+		if(layer[icon_voice].visible == true,
+			set(layer[icon_voice].visible, false);
+			set(layer[icon_voice_off].visible, true);
 			js(playAudio(get(scene[get(xml.scene)].doc),'off'));
+			js(playIntro(get(scene[get(xml.scene)].doc),'off'));
+
 			,
-			set(layer[text_music].html, 'NHẠC NỀN:ON');
+			set(layer[icon_voice].visible, true);
+			set(layer[icon_voice_off].visible, false);
 			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+
 		);
 	</action>
+
+	<action name="toggle_rotate" scope="local">
+		if(layer[icon_rotate].visible == true,
+			set(layer[icon_rotate].visible, false);
+			set(layer[icon_rotate_off].visible, true);
+			autorotate.stop();
+			,
+			set(layer[icon_rotate].visible, true);
+			set(layer[icon_rotate_off].visible, false);
+			autorotate.start();
+		);
+	</action>
+	
+	<action name="toggle_fullscene" scope="local">
+		if(layer[icon_zoom_out].visible == true,
+			set(layer[icon_zoom_out].visible, false);
+			set(layer[icon_zoom_in].visible, true);
+			switch(fullscreen);
+			,
+			set(layer[icon_zoom_out].visible, true);
+			set(layer[icon_zoom_in].visible, false);
+			switch(fullscreen);
+		);
+	</action>
+
+	<action name="toggle_camera" type="Javascript"><![CDATA[
+		try {
+			if (!krpano.webGL || !krpano.webGL.context) {
+			krpano.trace(3, "no webgl context");
+			return;
+			}
+			var attrs = krpano.webGL.context.getContextAttributes();
+			if (!attrs || !attrs.preserveDrawingBuffer) {
+			krpano.trace(3, "no preserveDrawingBuffer - enable it in embedpano.webglsettings");
+			return;
+			}
+
+			// Lấy ảnh PNG base64
+			var dataURL = krpano.webGL.canvas.toDataURL("image/png");
+
+			// Tạo filename theo timestamp
+			var now = new Date();
+			var fn = "krpano_screenshot_" +
+					now.getFullYear() + ("0"+(now.getMonth()+1)).slice(-2) + ("0"+now.getDate()).slice(-2) + "_" +
+					("0"+now.getHours()).slice(-2) + ("0"+now.getMinutes()).slice(-2) + ("0"+now.getSeconds()).slice(-2) +
+					".png";
+
+			// Tải về (Chrome/Edge/Firefox/Android…)
+			var a = document.createElement("a");
+			a.href = dataURL;
+			a.download = fn;
+
+			// Fallback cho Safari iOS/macOS (download attr có thể không hoạt động):
+			// Mở tab mới hiển thị ảnh để người dùng bấm giữ lưu ảnh
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (isSafari) {
+			var w = window.open();
+			if (w) { w.document.write('<img src="'+dataURL+'" style="width:100%;">'); }
+			else { a.click(); }
+			} else {
+			a.click();
+			}
+		} catch (err) {
+			krpano.trace(3, "screenshot error: " + err);
+		}
+		]]>
+	</action>
+
+	<!-- Ẩn tất cả layer/hotspot có is_ui="true", lưu lại trạng thái visible -->
+	<action name="ui_hide_all" scope="local">
+	for(set(i,0), i LT layer.count, inc(i),
+		if(layer[get(i)].is_ui === true,
+		copy(layer[get(i)]._vis_bak, layer[get(i)].visible);
+		set(layer[get(i)].visible, false);
+		);
+	);
+	for(set(h,0), h LT hotspot.count, inc(h),
+		if(hotspot[get(h)].is_ui === true,
+		copy(hotspot[get(h)]._vis_bak, hotspot[get(h)].visible);
+		set(hotspot[get(h)].visible, false);
+		);
+	);
+	</action>
+
+	<!-- Khôi phục trạng thái visible cũ -->
+	<action name="ui_restore_all" scope="local">
+	for(set(i,0), i LT layer.count, inc(i),
+		if(layer[get(i)]._vis_bak !== null,
+		set(layer[get(i)].visible, get(layer[get(i)]._vis_bak));
+		delete(layer[get(i)]._vis_bak);
+		);
+	);
+	for(set(h,0), h LT hotspot.count, inc(h),
+		if(hotspot[get(h)]._vis_bak !== null,
+		set(hotspot[get(h)].visible, get(hotspot[get(h)]._vis_bak));
+		delete(hotspot[get(h)]._vis_bak);
+		);
+	);
+	</action>
+
+	<!-- Chụp không UI: Ẩn → đợi 1 frame → chụp → đợi 1 frame → khôi phục -->
+	<action name="shot_without_ui">
+	ui_hide_all();
+	delayedcall(0.03, 
+		toggle_camera();
+		delayedcall(0.03, ui_restore_all());
+	);
+	</action>
+
 
 	<action name="skin_gyro_ondenied" scope="local">
 		addlayer(skin_gyro_ondenied);
@@ -802,11 +906,36 @@
 		);
 	</action>
 
+	<action name="toggle_menu" scope="local">
+	trace(get(layer[bgm_progress_fill].width));
+		if(layer[skin_btn_prev].visible,
+			set(layer[skin_btn_prev].visible, false);
+			set(layer[btn_view].visible, false);
+			set(layer[btn_audio].visible, false);
+			set(layer[btn_360].visible, false);
+			set(layer[btn_vr].visible, false);
+			set(layer[btn_menu].visible, false);
+			set(layer[btn_camera].visible, false);
+			set(layer[btn_rotate].visible, false);
+			set(layer[btn_zoom].visible, false);
+			,
+			set(layer[skin_btn_prev].visible, true);
+			set(layer[btn_view].visible, true);
+			set(layer[btn_audio].visible, true);
+			set(layer[btn_zoom].visible, true);
+			set(layer[btn_rotate].visible, true);
+			set(layer[btn_camera].visible, true);
+			set(layer[btn_360].visible, true);
+			set(layer[btn_vr].visible, true);
+			set(layer[btn_menu].visible, true);
+		)
+	</action>
+
 	<!-- skin events -->
 	<events name="skin_events" keep="true"
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
-	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); set(layer[location_container].x, get(scene[get(xml.scene)].mapx)); set(layer[location_container].y, get(scene[get(xml.scene)].mapy));"
-	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs();"
+	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); "
+	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio();"
 	onloadcomplete="skin_showloading(false); "
 	onidle="skin_deeplinking_update_url();"
 	onresize="skin_onresize();"
@@ -819,9 +948,9 @@
 	
 	<action name="skin_mousedown_event" scope="local">
 		if(first_drag,
-			set(layer[text_music].html, 'NHẠC NỀN:ON');
+			set(layer[icon_voice].visible, true);
+			set(layer[icon_voice_off].visible, false);
 			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-			set(layer[text_info].html, 'GIỚI THIỆU:ON');
 			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
 			set(first_drag, false);
 		);
@@ -1400,11 +1529,11 @@
 		if(layertoglow != null,
 			if(strength == null, strength=0.7; );
 			parentlayer = layer[get(layertoglow)];
-			set(layer[get(layertoglow)].bgcolor, 0x8a479c);
+			set(layer[get(layertoglow)].bgcolor, 0x323740);
 			set(layer[get(layertoglow)].bgalpha, 1.0);
 		  ,
 			set(layer[get(children)].background, false);
-			set(layer[get(children)].bgalpha, 0.0);
+			set(layer[get(children)].bgcolor, 0x6278a1);
 		);
 	</action>
 
@@ -1492,7 +1621,6 @@
 				, 
 				set(show,true); 
 				if(device.mobile OR device.tablet,
-					skin_hideskin();
 					tween(layer[skin_scroll_window].x,   0);
 					set(layer[skin_map_layer].oy, -50%);
 					set(layer[skin_map_layer].width, 100%);
@@ -1502,7 +1630,7 @@
 					set(layer[skin_map].width, 100%);
 					set(layer[skin_map].height, 100%);
 					set(layer[skin_map_layer].alpha, 1);
-					set(layer[skin_btn_show_menu].visible, false);
+
 				)
 				,
 				set(show,false);
@@ -1514,7 +1642,7 @@
 			set(layer[skin_map].visible, true);
 			tween(layer[skin_map].alpha, 1.0, 0.25);
 			set(layer[skin_map].state, 'opened');
-			calc(hh, area.pixelheight / 2 - skin_settings.controlbar_offset - layer[skin_control_bar].height + 32);
+			calc(hh, area.pixelheight - skin_settings.controlbar_offset - layer[skin_control_bar].height + 32);
 			calc(layer[skin_map].height, hh - skin_settings.controlbar_overlap);
 			tween(layer[skin_map_layer].y, 0);
 		  ,
@@ -1523,11 +1651,10 @@
 				tween(layer[skin_map].alpha, 0.0, 0.5, easeOutQuint);
 				tween(layer[skin_map_layer].y, calc(- area.pixelheight / 2-50), 0.5, easeOutQuint, set(layer[skin_map].visible,false) );
 				if(device.mobile OR device.tablet,
-					tween(layer[skin_map_layer].y, calc(- area.pixelheight / 2-100), 0.5, easeOutQuint, set(layer[skin_map].visible,false) );
+					tween(layer[skin_map_layer].y, calc(- area.pixelheight -100), 0.5, easeOutQuint, set(layer[skin_map].visible,false) );
 				)
 				
 			);
-			set(layer[skin_btn_show_menu].visible, true);
 		);
 	</action>
 
