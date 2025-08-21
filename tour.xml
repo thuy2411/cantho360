@@ -240,10 +240,6 @@
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="10.032556739239256" lng="105.7881556934933" alt="" heading="" doc="ninh-kieu">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
 	<scene name="scene_ninh_kithbu_2" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
