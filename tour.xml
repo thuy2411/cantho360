@@ -84,6 +84,11 @@
 		</image>
 
 		<hotspot name="spot1776694098" style="skin_hotspot_here" is_ui="true" ath="0.632" atv="39.39" depth="1000.0" linkedscene="scene_cthvng_qrthbn_ththd" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776694599" style="skin_hotspot_flycam_style" is_ui="true" ath="135.599" atv="-9.632" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1776694599thumb" style="skin_hotspotstyle_hover"  witdh="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1776694599text" is_ui="true" ath="135.599" atv="-9.632" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1776694599textline" style="poi_line" is_ui="true" ath="135.599" atv="-9.632"/>
+		
 		<hotspot name="spot1776694565" style="skin_hotspot_flycam_style" is_ui="true" ath="165.599" atv="-9.632" depth="1000.0" linkedscene="scene_ninh_kithbu_2" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1776694565thumb" style="skin_hotspotstyle_hover"  witdh="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_ninh_kithbu_2" linkedscene_hoffset="0.0" use3dtransition="true"  />
 		<hotspot name="spot1776694565text" is_ui="true" ath="165.599" atv="-9.632" html="Bến Ninh Kiều" style="poi_label_text"	is_show="true" linkedscene="scene_ninh_kithbu_2" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
@@ -189,7 +194,7 @@
 
 	</scene>
 
-	<scene name="scene_cho_noi_01" title="cho-noi-01" onstart="" thumburl="panos/cho_noi_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_cho_noi_01" title="Chợ Nổi Cái Răng 01" onstart="lookat(-70,10,120)" thumburl="panos/cho_noi_01.tiles/thumb.jpg" lat="10.005295158981486" lng="105.74592795582113" alt="" heading="" doc="cho-noi">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -201,12 +206,24 @@
 			<cube url="panos/cho_noi_01.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="spot1779381721" style="skin_hotspotstyle" ath="-61.991" atv="1.551" depth="1000.0" linkedscene="scene_cho_noi_02" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1779381777" style="skin_hotspotstyle" ath="-45.567" atv="-1.186" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779381721" style="skin_hotspot_drone" is_ui="true" ath="-61.991" atv="1.551" depth="1000.0" linkedscene="scene_cho_noi_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779381721text" is_ui="true" ath="-61.991" atv="1.551" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_02" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779381721textline" style="poi_line" is_ui="true" ath="-61.991" atv="1.551"/>
+
+		<hotspot name="spot1779381777" style="skin_hotspot_drone" is_ui="true" ath="-40.342" atv="4.415" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779381777text" is_ui="true" ath="-40.342" atv="4.415" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_03" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779381777textline" style="poi_line" is_ui="true" ath="-40.342" atv="4.415"/>
+
+		<hotspot name="spot1779396546" style="skin_hotspot_flycam_style"  is_ui="true" ath="140.649" atv="-8.787" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779396546thumb" style="skin_hotspotstyle_hover"  witdh="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1779396546text" is_ui="true" ath="140.649" atv="-8.787" html="Tổng Quan" style="poi_label_text"	is_show="true" linkedscene="scene_tthvng_quan" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779396546textline" style="poi_line" is_ui="true" ath="140.649" atv="-8.787"/>
 
 	</scene>
 
-	<scene name="scene_cho_noi_02" title="cho-noi-02" onstart="" thumburl="panos/cho_noi_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_cho_noi_02" title="Chợ Nổi Cái Răng 02" onstart="lookat(220,0,120)" thumburl="panos/cho_noi_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="cho-noi">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -218,12 +235,19 @@
 			<cube url="panos/cho_noi_02.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="spot1779381856" style="skin_hotspotstyle" ath="-2.686" atv="-0.826" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1779381943" style="skin_hotspotstyle" ath="-123.869" atv="-7.526" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779381856" style="skin_hotspot_drone" is_ui="true" ath="-2.686" atv="-0.826" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779381856text" is_ui="true" ath="-2.686" atv="-0.826" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779381856textline" style="poi_line" is_ui="true" ath="-2.686" atv="-0.826"/>
+
+		<hotspot name="spot1779381943" style="skin_hotspot_drone" is_ui="true" ath="-123.869" atv="-7.526" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779381943text" is_ui="true" ath="-123.869" atv="-7.526" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_03" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779381943textline" style="poi_line" is_ui="true" ath="-123.869" atv="-7.526"/>
 
 	</scene>
 
-	<scene name="scene_cho_noi_03" title="cho-noi-03" onstart="" thumburl="panos/cho_noi_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_cho_noi_03" title="Chợ Nổi Cái Răng 03" onstart="lookat(20,0,120)" thumburl="panos/cho_noi_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="cho-noi">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -235,8 +259,16 @@
 			<cube url="panos/cho_noi_03.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="spot1779382021" style="skin_hotspotstyle" ath="-21.599" atv="3.372" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1779382102" style="skin_hotspotstyle" ath="151.913" atv="-15.037" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779382021" style="skin_hotspot_drone" is_ui="true" ath="-21.599" atv="3.372" depth="1000.0" linkedscene="scene_cho_noi_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779382021text" is_ui="true" ath="-21.599" atv="3.372" html="Chợ Nổi Cái Răng" style="poi_label_text"	is_show="true" linkedscene="scene_cho_noi_02" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779382021textline" style="poi_line" is_ui="true" ath="-21.599" atv="3.372"/>
+
+		<hotspot name="spot1779382102" style="skin_hotspot_flycam_style" is_ui="true" ath="50.669" atv="-0.011" depth="1000.0" linkedscene="scene_ninh_kithbu_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<!-- <hotspot name="spot1776695687" style="skin_hotspot_drone" is_ui="true" ath="-0.517" atv="-17.71" depth="1000.0" linkedscene="scene_tthvng_quan" linkedscene_hoffset="0.0" use3dtransition="true" /> -->
+		<hotspot name="spot1779382102thumb" style="skin_hotspotstyle_hover"  witdh="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_ninh_kithbu_2" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1779382102text" is_ui="true" ath="50.669" atv="-0.011" html="Bến Ninh Kiều" style="poi_label_text"	is_show="true" linkedscene="scene_ninh_kithbu_2" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1779382102textline" style="poi_line" is_ui="true" ath="50.669" atv="-0.011"/>
 
 	</scene>
 

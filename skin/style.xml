@@ -108,6 +108,13 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;Với vị trí chỉ cách trung tâm Cần Thơ khoảng 15 km, đây là một điểm đến lý tưởng cho những ai muốn tìm sự thư thái, chiêm nghiệm giữa đời sống bận rộn, đồng thời trải nghiệm một phần bản sắc kiến trúc và văn hóa Phật giáo Việt Nam.		 		]]>
 	</data>
 
+  <data name="cho-noi"><![CDATA[
+    &nbsp;&nbsp;&nbsp;&nbsp;Chợ nổi Cái Răng là một trong những điểm đến nổi tiếng và đặc sắc nhất của thành phố Cần Thơ, nằm cách trung tâm thành phố khoảng 6 km theo hướng quốc lộ 1A. Đây là khu chợ trên sông lâu đời, hình thành từ hàng trăm năm trước, gắn liền với đời sống sông nước của cư dân miền Tây Nam Bộ.<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;Điểm đặc trưng làm nên sự khác biệt của chợ nổi Cái Răng là hoạt động mua bán diễn ra hoàn toàn trên thuyền, ghe. Từ tờ mờ sáng, hàng trăm chiếc ghe lớn nhỏ đã tụ họp đông đúc, mang theo đủ loại nông sản, trái cây, rau củ, hàng hóa thiết yếu. Để khách hàng dễ nhận biết, người bán thường treo sản phẩm mẫu lên một cây sào – gọi là “cây bẹo” – trước mũi ghe. Cảnh tượng hàng hóa treo lủng lẳng, ghe thuyền chen chúc, tiếng rao hàng hòa cùng nhịp sóng vỗ tạo nên bức tranh sinh động, rực rỡ sắc màu.<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;Không chỉ là nơi giao thương, chợ nổi Cái Răng còn là không gian văn hóa, phản ánh lối sống giản dị, thân thiện và nghĩa tình của người dân miền Tây. Đến đây, du khách không chỉ có thể mua trái cây tươi ngon, thưởng thức các món ăn đặc sản ngay trên ghe như hủ tiếu, bún riêu, cà phê… mà còn được trải nghiệm nhịp sống sông nước độc đáo, hiếm nơi nào có được.<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;Ngày nay, dù giao thông đường bộ đã phát triển, chợ nổi Cái Răng vẫn giữ nguyên sức hút, trở thành một trong những chợ nổi lớn nhất và sầm uất nhất Đồng bằng sông Cửu Long. Đây là điểm du lịch hấp dẫn, nơi mà du khách có thể cảm nhận rõ nét tinh thần “sống chung với sông nước”, đồng thời tìm thấy hồn cốt của văn hóa miền Tây – mộc mạc, phóng khoáng và nghĩa tình.
+				]]>
+	</data>
     <action name="hotspot_flycam_thumb_new" scope="local" args="isTrue">
 		if(isTrue,
 			set(hotspot[calc(get(caller.name) +'thumb')].url, get(scene[get(caller.linkedscene)].thumburl));
