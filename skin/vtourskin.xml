@@ -62,7 +62,10 @@
 	<scence_array name=""></scence_array>
 
 	<set var="view_360" val="none" />
+	<set var="check_click" val="false" />
+	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
+	<set var="menu_items" val="'scene_tthvng_quan|Đền thờ Hùng Vương|den-hung,scene_ninh_kithbu_1|Bến Ninh Kiều|ninh-kieu,scene_san_truoc|Đình Bình Thủy|dinh-binh-thuy,cho-cai-rang|Chợ nổi Cái Răng|a,scene_cong_vao|Nhà Cổ Bình Thủy|nha-co-binh-thuy,scene_bpqn_ngopgi_chthj|Chợ Cổ Cần Thơ|cho-can-tho,scene_cong_tam_quan|Thiền Viện Trúc Lâm Phương Nam|thien-vien-truc-lam-phuong-nam'" />
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
 
@@ -307,7 +310,93 @@
 	       html=""
 	       />
 
-
+	<layer name="menu_box" type="container"
+		width="100%" height="50%"
+		zorder="4"
+		align="left"
+		keep="true">
+	</layer>
+	<layer name="thumb_box" type="container" keep="true"
+			align="lefttop" x="0" y="0" width="100%" height="100%"
+			bgcolor="0x000000" bgalpha="0.0" roundedge="16" bgborder="0">
+		<layer name="thumb_list_container" type="container" bgalpha="0.0" align="lefttop" x="-300" y="20%" width="300" height="70%" keep="true">
+			<layer name="thumb_container" 
+					type="container" 
+					keep="true"
+					bgcolor="0xffffff"
+					width="100%"
+					height="70"
+					bgalpha="0.0"
+					childmargin="0 10 10 0"
+					>
+					<layer name="scene_click_close" url="icons/close.png" x="5" align="bottomleft" width="24" height="24" onclick="close_thumb_list();"/>
+					<layer name="scene_click_title" 
+						type="text" 
+						html="" 
+						align="bottom" 
+						onclick="show_more_thumb();"
+						height="auto"
+						width="80%"
+						css="color:#fff; font-size:16px; text-align:center;"
+						background="false"
+						/>
+					<layer name="scene_click_play" url="icons/play.png" align="bottomright" width="16" height="16" onclick="show_more_thumb();"/>
+					<layer name="scene_click_down" url="icons/down.png" align="bottomright" width="16" height="16" visible="false" onclick="show_more_thumb();"/>
+			</layer>
+			<layer name="thumb_container_border" 
+				y="70"
+				type="container" 
+				keep="true"
+				bgcolor="0xffffff"
+				width="100%"
+				height="2"
+				bgalpha="1"
+				childmargin="0 10 10 0"
+				>
+			</layer>
+			<layer name="thumb_scroll_container" type="container" bgalpha="0.0" align="lefttop" y="72" width="300" height="85%" keep="true">
+				<layer name="scrollarea_thumb"
+					type="scrollarea"
+					align="top" 
+					width="100%"
+					flowchildren="v"
+					draggable="true"
+					mwheel="true"
+					capturechildren="true"
+					autoscrollbars="null,vscrollbar_thumb_grip,10"
+					onhover_autoscrolling="false"
+					onscroll=""
+					onoverflowchange=""
+					scrolltype="smooth"
+					direction="v"
+				>
+				</layer>
+				<layer name="vscrollbar_thumb_bg" type="container" align="right" width="16" height="0">
+					<layer name="vscrollbar_thumb_grip" type="container" align="righttop" width="8" x="4" height="16" bgcolor="0xbd5353" bgalpha="0.5" bgroundedge="7" bgcapture="true" />
+				</layer>
+			</layer>
+		</layer>
+	</layer>
+	<layer name="image_box" type="container"
+		bgcolor="0xffffff"
+		width="27%" height="40%"
+		zorder="5"
+		x="0"
+		y="0"
+		bgalpha="1"
+		visible="false"
+		align="center"
+		keep="true">
+		<layer name="image_demo" type="image"
+			bgcolor="0x000000"
+			width="98%" height="98%"
+			zorder="4"
+			x="0"
+			y="0"
+			align="center"
+			keep="true">
+		</layer>
+	</layer>
 	<!-- skin layout -->
 	<layer name="skin_layer" keep="true" type="container" align="top" width="get:skin_settings.layout_width" maxwidth="100%" height="100%" maskchildren="true" visible="false" bgcapture="false" zorder="1">
 		<layer name="skin_scroll_window" type="container" align="left" width="100%" height="100%" x="0" y="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="1" bgroundedge.firefox="1">
@@ -491,7 +580,7 @@
 	<layer name="skin_btn_prev_fs" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(-1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_prev_fs_icon" style="skin_base" crop="0|64|64|64"  align="center" scale="0.5" enabled="false" />
 	</layer>
-	<layer name="skin_btn_show_menu" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onout="tween(alpha,0.75);" ondown.touch="onhover();" onup.touch="onout();">
+	<layer name="skin_btn_show_menu" keep="true" type="container" align="left"  x="-50" width="40" height="10%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onout="tween(alpha,0.75);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_show_menuicon" style="skin_base" crop="64|64|64|64"  align="center" scale="0.5" enabled="true" onhover="skin_showskin" onclick="skin_showskin;"/>
 	</layer>
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
@@ -516,7 +605,202 @@
 		ondenied="skin_gyro_ondenied();" 
 		/>
 
-		
+	<action name="show_more_thumb" scope="local">
+		if(click_title_flg,
+			set(click_title_flg, false);
+			set(layer[scene_click_play].visible, true);
+			set(layer[scene_click_down].visible, false);
+			set(layer[thumb_list].visible, false);
+			set(layer[vscrollbar_thumb_bg].height, 0);
+			,
+			set(click_title_flg, true);
+			set(layer[scene_click_play].visible, false);
+			set(layer[scene_click_down].visible, true);
+			set(layer[thumb_list].visible, true);
+			set(layer[vscrollbar_thumb_bg].height, '100%');
+		);
+	</action>
+	<action name="gen_thumb_scroll" scope="local" args="scene_name">
+		removelayer(thumb_list, true);
+		addlayer(thumb_list);
+		set(layer[thumb_list].type, "container");
+		set(layer[thumb_list].parent, "scrollarea_thumb");
+		set(layer[thumb_list].keep, true);
+		set(layer[thumb_list].width, "100%");
+		set(layer[thumb_list].visible, true);
+		set(layer[thumb_list].bgalpha, 0.0);
+
+		set(i, 0);
+		for(set(sceneindex, 0), sceneindex LT scene.count, inc(sceneindex),
+			if(scene[get(sceneindex)].doc == get(scene_name),
+				copy(scname, scene[get(sceneindex)].name);
+				copy(title, scene[get(scname)].title);
+				copy(thumburl, scene[get(scname)].thumburl);
+				set(scname_thumb, calc(get(scname) + 'thumbs'));
+				<!-- Tính vị trí grid -->
+				set(oy, calc(get(i) * 130 + 10));   <!-- khoảng cách dọc -->
+						<!-- Tạo thumbnail -->
+				addlayer(calc(get(scname_thumb) + 'bd'));
+				<!-- set(layer[get(scname_thumb)].parent, thumb_wall); -->
+				set(layer[calc(get(scname_thumb) + 'bd')].parent, "thumb_list");
+				set(layer[calc(get(scname_thumb) + 'bd')].type, 'container');
+				set(layer[calc(get(scname_thumb) + 'bd')].align, top);
+				set(layer[calc(get(scname_thumb) + 'bd')].oy, get(oy));
+				set(layer[calc(get(scname_thumb) + 'bd')].width, 234);
+				set(layer[calc(get(scname_thumb) + 'bd')].height, 124);
+				set(layer[calc(get(scname_thumb) + 'bd')].distorted, true);
+				set(layer[calc(get(scname_thumb) + 'bd')].zorder, 6);
+				set(layer[calc(get(scname_thumb) + 'bd')].keep, true);
+				set(layer[calc(get(scname_thumb) + 'bd')].background, true);
+				set(layer[calc(get(scname_thumb) + 'bd')].bgalpha, 0.8);
+				set(layer[calc(get(scname_thumb) + 'bd')].bgcolor, 0xe8a107);
+				set(layer[calc(get(scname_thumb) + 'bd')].bgroundedge, 10);
+				set(layer[calc(get(scname_thumb) + 'bd')].maskchildren, true);
+				set(layer[calc(get(scname_thumb) + 'bd')].padding, 10);
+						<!-- Tạo thumbnail -->
+				addlayer(calc(get(scname_thumb) + 'bg'));
+				<!-- set(layer[get(scname_thumb)].parent, thumb_wall); -->
+				set(layer[calc(get(scname_thumb) + 'bg')].parent, calc(get(scname_thumb) + 'bd'));
+				set(layer[calc(get(scname_thumb) + 'bg')].type, 'container');
+				set(layer[calc(get(scname_thumb) + 'bg')].align, center);
+				set(layer[calc(get(scname_thumb) + 'bg')].width, 230);
+				set(layer[calc(get(scname_thumb) + 'bg')].height, 120);
+				set(layer[calc(get(scname_thumb) + 'bg')].distorted, true);
+				set(layer[calc(get(scname_thumb) + 'bg')].zorder, 6);
+				set(layer[calc(get(scname_thumb) + 'bg')].keep, true);
+				set(layer[calc(get(scname_thumb) + 'bg')].background, true);
+				set(layer[calc(get(scname_thumb) + 'bg')].bgalpha, 0.8);
+				set(layer[calc(get(scname_thumb) + 'bg')].bgcolor, 0xe8a107);
+				set(layer[calc(get(scname_thumb) + 'bg')].bgroundedge, 10);
+				set(layer[calc(get(scname_thumb) + 'bg')].maskchildren, true);
+				set(layer[calc(get(scname_thumb) + 'bg')].padding, 10);
+				
+				addlayer(get(calc(get(scname_thumb) + 'text')));
+				<!-- set(hotspot[get(calc(get(scname_thumb) + 'text'))].parent, thumb_wall); -->
+				set(layer[get(calc(get(scname_thumb) + 'text'))].parent, calc(get(scname_thumb) + 'bg'));
+				set(layer[get(calc(get(scname_thumb) + 'text'))].type, 'text');
+				set(layer[get(calc(get(scname_thumb) + 'text'))].html, get(title));
+				set(layer[get(calc(get(scname_thumb) + 'text'))].align, bottomleft);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].scale, 1.0);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].distorted, true);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].zorder, 8);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].keep, true);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].background, false);
+				set(layer[get(calc(get(scname_thumb) + 'text'))].css, 'color:#fff; font-size:14px');
+				set(temp, calc('skin_loadscene(' + get(scname) + ',' + get(skin_settings.loadscene_blend) + ');'));
+				set(layer[get(calc(get(scname_thumb) + 'text'))].onclick, get(temp));
+
+				addlayer(get(scname_thumb));
+				<!-- set(hotspot[get(scname_thumb)].parent, thumb_wall); -->
+				set(layer[get(scname_thumb)].url, get(thumburl));
+				set(layer[get(scname_thumb)].parent, calc(get(scname_thumb) + 'bg'));
+				set(layer[get(scname_thumb)].type, 'image');
+				set(layer[get(scname_thumb)].align, center);
+				set(layer[get(scname_thumb)].width, 240);
+				set(layer[get(scname_thumb)].height, 130);
+				set(layer[get(scname_thumb)].scale, 1.0);
+				set(layer[get(scname_thumb)].distorted, true);
+				set(layer[get(scname_thumb)].zorder, 7);
+				set(layer[get(scname_thumb)].keep, true);
+				set(temp, calc('skin_loadscene(' + get(scname) + ',' + get(skin_settings.loadscene_blend) + ');'));
+				set(layer[get(scname_thumb)].onclick, get(temp));
+				<!-- Tạo thumbnail -->
+
+				inc(i);
+			);
+		);
+		set(layer[thumb_list].height, calc(get(i) * 130 + 10));
+	</action>
+
+<action name="build_menu" autorun="onstart" scope="local">
+    set(layer_y,20);
+    txtsplit(get(menu_items), "," , items);
+    for(set(i,0), i LT items.count, inc(i),
+        txtsplit(get(items[get(i)].value), '|', item);
+        set(scene_name, get(item[0].value));
+        set(scene_title, get(item[1].value));
+        set(scene_doc, get(item[2].value));
+        addlayer(get(scene_name));
+        set(layer[get(scene_name)].parent, 'menu_box');
+        set(layer[get(scene_name)].state, 'normal');
+        set(layer[get(scene_name)].type, 'text');
+        set(layer[get(scene_name)].align, 'lefttop');
+        set(layer[get(scene_name)].x, 20);
+        set(layer[get(scene_name)].keep, true);
+        set(layer[get(scene_name)].doc, get(scene_doc));
+        set(layer[get(scene_name)].y, get(layer_y));
+        set(layer[get(scene_name)].html, get(scene_title));
+        set(layer[get(scene_name)].background, false);
+        set(layer[get(scene_name)].zorder, 5);
+        set(layer[get(scene_name)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
+
+        set(layer[get(scene_name)].onover,  "menu_item_over();");
+        set(layer[get(scene_name)].onout,   "menu_item_out();");
+        set(layer[get(scene_name)].onclick, "menu_item_click(true);");
+
+        inc(layer_y, 40);
+    );
+</action>
+<action name="menu_item_over" scope="local">
+	set(layer[get(caller.name)].css, 'color:rgb(255, 170, 255); font-size:18px; border-left:4px solid #ffcc00; padding-left:10px;');
+	tween(layer[get(caller.name)].scale, 1.1, 1.0, easeOutExpo);
+	tween(layer[thumb_box].bgalpha, 0.5, 1.0, easeOutExpo);
+	set(layer[image_box].visible, true);
+	set(layer[image_demo].url, get(scene[get(caller.name)].thumburl));
+</action>
+
+<action name="menu_item_out" scope="local">
+	if(get(check_click) == true,
+		tween(layer[thumb_box].bgalpha, 0.5, 1.0, easeOutExpo);
+		,
+		tween(layer[thumb_box].bgalpha, 0, 1.0, easeOutExpo);
+	);
+    if(layer[get(caller.name)].state != 'active',
+        set(layer[get(caller.name)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
+		tween(layer[get(caller.name)].scale, 1.0, 1.1, easeOutExpo);
+		);
+	set(layer[image_box].visible, false);
+	</action>
+
+<action name="menu_item_click" scope="local" args="is_check">
+	if(is_check,
+		set(check_click,true);
+		set(click_title_flg, true);
+		tween(layer[thumb_list_container].x, 0, 1, easeOutExpo);
+		tween(layer[menu_box].x, 300, 0.4, easeOutExpo);
+		set(layer[scene_click_title].html, get(caller.html));
+		gen_thumb_scroll(get(caller.doc));
+		show_more_thumb();
+		,
+		set(check_click,false);
+		tween(layer[thumb_list_container].x, -300, 0.4, easeOutExpo);
+		tween(layer[menu_box].x, 0, 1, easeOutExpo);
+		tween(layer[thumb_box].bgalpha, 0, 1.0, easeOutExpo);
+	);
+</action>
+
+<action name="set_select_item" scope="local">
+	set(current, get(scene[get(xml.scene)].doc));
+    txtsplit(get(menu_items), "," , items);
+    for(set(i,0), i LT items.count, inc(i),
+		txtsplit(get(items[get(i)].value), '|', item);
+        set(scene_name, get(item[2].value));
+		if(scene_name == current,
+			set(layer[get(item[0].value)].state, 'active');
+			set(layer[get(item[0].value)].css, 'color:rgb(255, 170, 255); font-size:18px; border-left:4px solid #ffcc00; padding-left:10px;');
+		,
+			set(layer[get(item[0].value)].state, 'normal');
+			tween(layer[get(item[0].value)].scale, 1.0, 1.1, easeOutExpo);
+			set(layer[get(item[0].value)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
+		);
+    );
+</action>
+
+<action name="close_thumb_list" scope="local">
+	trace("check");
+	menu_item_click(false);
+</action>
+
 <action name="hide_all_thumbs" scope="local">
 	set(i, 0);
 	for(set(i, 0), i LT global.thumbs.length, inc(i),
@@ -935,7 +1219,7 @@
 	<events name="skin_events" keep="true"
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
 	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); "
-	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio();"
+	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio(); set_select_item();"
 	onloadcomplete="skin_showloading(false); "
 	onidle="skin_deeplinking_update_url();"
 	onresize="skin_onresize();"
@@ -943,7 +1227,8 @@
 	onexitfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '0|576|64|64');"
 	onkeydown="skin_keydown_event();"
 	onmousedown="skin_mousedown_event();"
-	ontouchstart="skin_mousedown_event(); "
+	ontouchstart="skin_mousedown_event();"
+	onwheel="close_thumb_list()"
 	/>
 	
 	<action name="skin_mousedown_event" scope="local">
