@@ -160,7 +160,7 @@
 	<style name="skin_thumbtext_style" type="text" align="bottom" width="100%" y="5" enabled="false" bg="false" bgborder="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:10px;'" txtshadow="get:skin_settings.design_text_txtshadow" />
 
 	<!-- skin_hotspotstyle - style for the hotspots -->
-	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" edge="top" distorted="true"
+	<style name="skin_hotspotstyle" url="icons/arrow_ahead.png" edge="top" distorted="true"
 	       tooltip=""
 	       linkedscene=""
 	       linkedscene_lookat=""
@@ -168,10 +168,10 @@
 	       use3dtransition="false"
 	       onclick="skin_hotspotstyle_click();"
 	       depth="1000"
-	       scale="0.5"
-	       onover.addevent="tween(scale,0.55);"
-	       onout.addevent="tween(scale,0.5);"
-	       onloaded.addevent="skin_hotspotstyle_setup();"
+	       scale="1"
+	       onover.addevent="tween(scale,1.2);"
+	       onout.addevent="tween(scale,1);"
+	       onloaded.addevent="skin_hotspotstyle_setup(); do_crop_animation(128,128,30);"
 	       />
 
 	<action name="hotspot_flycam_thumb" scope="local" args="isTrue">
@@ -342,8 +342,8 @@
 						onover="set(layer[scene_click_title].css, color: red; font-size:16px; text-align:center;)"
 						onout="set(layer[scene_click_title].css, color:#fff; font-size:16px; text-align:center;)"
 						/>
-					<layer name="scene_click_play" url="icons/play.png" align="bottomright" width="16" height="16" onclick="show_more_thumb();"/>
-					<layer name="scene_click_down" url="icons/down.png" align="bottomright" width="16" height="16" visible="false" onclick="show_more_thumb();"/>
+					<!-- <layer name="scene_click_play" url="icons/play.png" align="bottomright" width="16" height="16" onclick="show_more_thumb();"/> -->
+					<!-- <layer name="scene_click_down" url="icons/down.png" align="bottomright" width="16" height="16" visible="false" onclick="show_more_thumb();"/> -->
 			</layer>
 			<layer name="thumb_container_border" 
 				y="70"
@@ -607,19 +607,12 @@
 		/>
 
 	<action name="show_more_thumb" scope="local">
-		if(click_title_flg,
-			set(click_title_flg, false);
-			set(layer[scene_click_play].visible, true);
-			set(layer[scene_click_down].visible, false);
-			set(layer[thumb_list].visible, false);
-			set(layer[vscrollbar_thumb_bg].height, 0);
-			,
+		
 			set(click_title_flg, true);
 			set(layer[scene_click_play].visible, false);
 			set(layer[scene_click_down].visible, true);
 			set(layer[thumb_list].visible, true);
 			set(layer[vscrollbar_thumb_bg].height, '100%');
-		);
 	</action>
 	<action name="gen_thumb_scroll" scope="local" args="scene_name">
 		removelayer(thumb_list, true);
