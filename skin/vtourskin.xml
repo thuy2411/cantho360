@@ -470,7 +470,6 @@
 				onoverflowchange=""
 				>
 				<layer name="somecontent" type="text" align="lefttop" html="get:data[test].content" htmlautosize="true" width="100%" bgalpha="0.0" css="color:white; font-size:1.5rem; text-align:justify; line-height: 1.5; font-family: Arial, sans-serif; padding: 10px;"
-					onclick="callwith(hotspot[info], set(enabled,true);tween(alpha,1); spheretoscreen(ath,atv,fade_to_x,fade_to_y); ); fade_to_x-=stagewidth/2; fade_to_y-=stageheight/2; callwith(layer[box], tween(scale|alpha|ox|oy,('0|0|'+fade_to_x+'|'+fade_to_y)) ); "
 					/>
 			</layer>
 			<layer name="vscrollbar_bg" type="container" align="right" width="16" height="100%">
@@ -544,9 +543,9 @@
 			</layer>
 		</layer>
 
-				<layer name="btn_voice" type="container" align="rightbottom" x="43" y="38" width="144" height="144"  bgcapture="true" onclick="toggle_audio();" bgroundedge="20">
-					<layer name="icon_voice" capture="false" visible="false" url="icons/voice.webp" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center" />
-					<layer name="icon_voice_off" capture="false"  url="icons/voice_off.png" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center" />
+				<layer name="btn_voice" type="container" align="rightbottom" x="43" y="38" width="144" height="144"  bgcapture="true" onclick="toggle_audio();" bgroundedge="70"  maskchildren="true">
+					<layer name="icon_voice" capture="false" visible="false" url="icons/voice.webp" align="center" x="0" y="0" width="144" height="144" scale="1.5" origin="center" />
+					<layer name="icon_voice_off" capture="false"  url="icons/voice.png" align="center" x="0" y="0" width="144" height="144" scale="1.5" origin="center" />
 				</layer>
 
 				<layer name="btn_info_circle" type="container" style="skin_hover" align="rightbottom" x="144" y="144" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="show_info();" bgroundedge="20">

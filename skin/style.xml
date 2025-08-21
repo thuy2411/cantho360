@@ -45,7 +45,7 @@
 	       />
     <style name="skin_hotspotstyle_hover"
 	    onclick="skin_hotspotstyle_click();"
-        onover.addevent="hotspot_flycam_thumb_new(true);"
+      onover.addevent="hotspot_flycam_thumb_new(true);"
 	    onout.addevent="hotspot_flycam_thumb_new(false);" />
 
     <data name="den-hung"><![CDATA[
@@ -119,8 +119,59 @@
 			,
 			set(hotspot[calc(get(caller.name))].visible, false);
 			set(skin_settings.autotour, true);
-			autorotate.start();
+			if(layer[icon_rotate_off].visible==false,
+				autorotate.start();
+			)
 		);
 		
 	</action>
+
+  <style name="poi_line" type="container"
+    bg="true" width="2" edge="bottom" align="bottom"
+    bgalpha="1" 
+    bgcolor="0xFFFFFF" />
+
+  <style name="poi_label_text"  oy="-135" ox="3"
+    type="text" padding="6 10 6 10" scale="0" edge="left" align="left"
+    css="font-family:Helvetica;font-size:14px;color:#fff;text-wrap:nowrap; border:1px solid yellow;"
+    bg="true" bgalpha="1" bgcolor="0x27C1B5" 
+    bgshadow="true"  onclick="skin_hotspotstyle_click();" />  
+
+  <events name="poi_evt" keep="true"
+    onnewscene="poi_cleanup(); poi_build_labels();"
+    onviewchange="poi_update_labels();" />
+
+  <action name="poi_update_labels" scope="local">
+    for(set(h,0), h LT hotspot.count, inc(h),
+      if(hotspot[get(h)].is_show == true,
+        copy(hn,   hotspot[get(h)].name);
+        copy(hath, hotspot[get(hn)].ath );
+        copy(hatv, hotspot[get(hn)].atv );
+        spheretoscreen(hath, hatv, sx, sy);
+        if(sx != null AND sy != null AND sx GE 0 AND sx LE get(stagewidth),
+          if(sy GE 0 AND sy LE get(stageheight),
+            
+             /* ---- FOCUS THEO PIXEL QUANH TÂM ---- */
+            calc(cx, get(stagewidth)  * 0.5);
+            calc(cy, get(stageheight) * 0.5);
+            calc(dxpx, abs(sx - cx));
+            calc(dypx, abs(sy - cy));
+
+            /* bán kính vùng chú ý (px) – có thể override per-hotspot bằng attr focus_radius */
+            set(focus_radius, 300);
+            if(hotspot[get(hn)].focus_radius, copy(focus_radius, hotspot[get(hn)].focus_radius); );
+
+            if(dxpx LE focus_radius AND dypx LE focus_radius,
+              set(hotspot[get(hn)].visible,true);
+              tween(hotspot[get(hn)].scale,1,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,150,1,easeOutExpo);
+            ,
+              tween(hotspot[get(hn)].scale,0,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,0,1,easeOutExpo);
+            );
+          );
+        );,
+      );
+    );
+  </action>
 </krpano>
