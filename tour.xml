@@ -189,23 +189,8 @@
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="10.032556739239256" lng="105.7881556934933" alt="" heading="" doc="ninh-kieu">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/Ninh_Kithbu_1.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/Ninh_Kithbu_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
-		</image>
-
-		<hotspot name="spot1776681214" style="skin_hotspotstyle" is_ui="true" ath="-89.865" atv="18.51" depth="1000.0" linkedscene="scene_ninh_kithbu_4" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_ninh_kithbu_2" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_2" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -240,6 +225,23 @@
 		<hotspot name="spot1776683342" style="skin_hotspotstyle" is_ui="true" ath="93.071" atv="26.969" depth="1000.0" linkedscene="scene_ninh_kithbu_2" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
+	
+	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="lookat(-90,0,120)" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="10.032556739239256" lng="105.7881556934933" alt="" heading="" doc="ninh-kieu">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Ninh_Kithbu_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Ninh_Kithbu_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1776681214" style="skin_hotspotstyle" is_ui="true" ath="-89.865" atv="18.51" depth="1000.0" linkedscene="scene_ninh_kithbu_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779374878" style="skin_hotspotstyle" ath="102.936" atv="18.949" depth="1000.0" linkedscene="scene_ninh_kithbu_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
 
 	<scene name="scene_ninh_kithbu_4" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_4.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
@@ -254,10 +256,11 @@
 		</image>
 
 		<hotspot name="spot1776682784" style="skin_hotspotstyle" is_ui="true" ath="-0.511" atv="21.453" depth="1000.0" linkedscene="scene_ninh_kithbu_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779375058" style="skin_hotspotstyle" ath="179.975" atv="15.86" depth="1000.0" linkedscene="scene_ninh_kithbu_1" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_5" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_5.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_5" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_5.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -270,10 +273,11 @@
 		</image>
 
 		<hotspot name="spot1776682892" style="skin_hotspotstyle" is_ui="true" ath="-0.62" atv="21.29" depth="1000.0" linkedscene="scene_ninh_kithbu_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779375227" style="skin_hotspotstyle" ath="-179.81" atv="15.534" depth="1000.0" linkedscene="scene_ninh_kithbu_4" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_ninh_kithbu_6" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_6.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
+	<scene name="scene_ninh_kithbu_6" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_6.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
