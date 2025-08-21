@@ -189,6 +189,60 @@
 
 	</scene>
 
+	<scene name="scene_cho_noi_01" title="cho-noi-01" onstart="" thumburl="panos/cho_noi_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cho_noi_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cho_noi_01.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1779381721" style="skin_hotspotstyle" ath="-61.991" atv="1.551" depth="1000.0" linkedscene="scene_cho_noi_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779381777" style="skin_hotspotstyle" ath="-45.567" atv="-1.186" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cho_noi_02" title="cho-noi-02" onstart="" thumburl="panos/cho_noi_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cho_noi_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cho_noi_02.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1779381856" style="skin_hotspotstyle" ath="-2.686" atv="-0.826" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779381943" style="skin_hotspotstyle" ath="-123.869" atv="-7.526" depth="1000.0" linkedscene="scene_cho_noi_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cho_noi_03" title="cho-noi-03" onstart="" thumburl="panos/cho_noi_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cho_noi_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cho_noi_03.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1779382021" style="skin_hotspotstyle" ath="-21.599" atv="3.372" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1779382102" style="skin_hotspotstyle" ath="151.913" atv="-15.037" depth="1000.0" linkedscene="scene_cho_noi_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_ninh_kithbu_1" title="Bến Ninh Kiều" onstart="" thumburl="panos/Ninh_Kithbu_1.tiles/thumb.jpg" lat="10.032556739239256" lng="105.7881556934933" alt="" heading="" doc="ninh-kieu">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
 
 	<scene name="scene_ninh_kithbu_2" title="Bến Ninh Kiều" onstart="lookat(0,0,120)" thumburl="panos/Ninh_Kithbu_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ninh-kieu">
 		
