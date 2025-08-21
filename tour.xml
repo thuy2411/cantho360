@@ -293,7 +293,7 @@
 
 	</scene>
 
-	<scene name="scene_bpqn_ngopgi_chthj" title="Bên ngoài chợ" onstart="" thumburl="panos/Bpqn_ngopgi_chthj.tiles/thumb.jpg" lat="10.03155859191283" lng="105.78808770885222" alt="" heading="" doc="cho-can-tho">
+	<scene name="scene_bpqn_ngopgi_chthj" title="Bên ngoài chợ" onstart="lookat(0,-20,120)" thumburl="panos/Bpqn_ngopgi_chthj.tiles/thumb.jpg" lat="10.03155859191283" lng="105.78808770885222" alt="" heading="" doc="cho-can-tho">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 

@@ -339,6 +339,8 @@
 						width="80%"
 						css="color:#fff; font-size:16px; text-align:center;"
 						background="false"
+						onover="set(layer[scene_click_title].css, color: red; font-size:16px; text-align:center;)"
+						onout="set(layer[scene_click_title].css, color:#fff; font-size:16px; text-align:center;)"
 						/>
 					<layer name="scene_click_play" url="icons/play.png" align="bottomright" width="16" height="16" onclick="show_more_thumb();"/>
 					<layer name="scene_click_down" url="icons/down.png" align="bottomright" width="16" height="16" visible="false" onclick="show_more_thumb();"/>

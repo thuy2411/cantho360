@@ -138,7 +138,6 @@
     bgshadow="true"  onclick="skin_hotspotstyle_click();" />  
 
   <events name="poi_evt" keep="true"
-    onnewscene="poi_cleanup(); poi_build_labels();"
     onviewchange="poi_update_labels();" />
 
   <action name="poi_update_labels" scope="local">
@@ -158,7 +157,7 @@
             calc(dypx, abs(sy - cy));
 
             /* bán kính vùng chú ý (px) – có thể override per-hotspot bằng attr focus_radius */
-            set(focus_radius, 300);
+            set(focus_radius, 600);
             if(hotspot[get(hn)].focus_radius, copy(focus_radius, hotspot[get(hn)].focus_radius); );
 
             if(dxpx LE focus_radius AND dypx LE focus_radius,
