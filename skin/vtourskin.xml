@@ -65,7 +65,7 @@
 	<set var="check_click" val="false" />
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
-	<set var="menu_items" val="'scene_tthvng_quan|Đền thờ Hùng Vương|den-hung,scene_ninh_kithbu_1|Bến Ninh Kiều|ninh-kieu,scene_san_truoc|Đình Bình Thủy|dinh-binh-thuy,cho-cai-rang|Chợ nổi Cái Răng|a,scene_cong_vao|Nhà Cổ Bình Thủy|nha-co-binh-thuy,scene_bpqn_ngopgi_chthj|Chợ Cổ Cần Thơ|cho-can-tho,scene_cong_tam_quan|Thiền Viện Trúc Lâm Phương Nam|thien-vien-truc-lam-phuong-nam'" />
+	<set var="menu_items" val="'scene_tthvng_quan|Đền thờ Hùng Vương|den-hung,cho-cai-rang|Chợ nổi Cái Răng|cho-noi,scene_ninh_kithbu_1|Bến Ninh Kiều|ninh-kieu,scene_bpqn_ngopgi_chthj|Chợ Cổ Cần Thơ|cho-can-tho,scene_cong_vao|Nhà Cổ Bình Thủy|nha-co-binh-thuy,scene_san_truoc|Đình Bình Thủy|dinh-binh-thuy,scene_cong_tam_quan|Thiền Viện Trúc Lâm Phương Nam|thien-vien-truc-lam-phuong-nam'" />
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
 
